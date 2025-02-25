@@ -86,4 +86,4 @@ const getInfoBlock = async (req, res, next) => {
 // };
 
 
-module.exports = { getInfoBlock, getInfoCounter, getInfoTx, getLastBlock };
+module.exports = { getInfoBlock, getLastBlock };
