@@ -3,9 +3,11 @@ const express=require("express")
 const { setError } = require("./src/config/error")
 const indexRouter = require("./src/api/routes/indexRouter")
 const cors=require("cors")
+const limiter = require("./src/middlewares/rateLimiter")
 const app=express()
 const PORT=4000
 app.use(express.json())
+app.use(limiter)
 app.use(cors())
 app.use("/explorer",indexRouter)
 
